@@ -5,12 +5,7 @@ import {
   signInWithPopup,
   GoogleAuthProvider,
 } from "firebase/auth";
-import {
-  getFirestore
-  doc,
-  getDoc,
-  setDoc
-} from 'firebase/firestore'
+import { getFirestore, doc, getDoc, setDoc} from 'firebase/firestore'
 
 const firebaseConfig = {
   apiKey: "AIzaSyDI45QcxB1pqAgMPDEy9rB2QdAcr5Aof4Y",
@@ -54,6 +49,5 @@ export const createUserDocumentFromAuth = async (userAuth) => {
       console.log(error.message)
     }
   }
-  
   return userDocRef;
 }
